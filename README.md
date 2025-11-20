@@ -1,30 +1,58 @@
 # ILMS - Integrated Lands Management System
 
-> **ERP System for PNG Department of Lands & Physical Planning**
+> **Enterprise Resource Planning (ERP) System for Papua New Guinea's Department of Lands & Physical Planning**
 
-## 🎯 Quick Start
+[![License](https://img.shields.io/badge/license-Proprietary-red.svg)](LICENSE)
+[![Built with Same](https://img.shields.io/badge/Built%20with-Same-blue)](https://same.new)
 
-### 1. Supabase is Already Connected! ✅
+A comprehensive, modern web-based ERP system unifying all land management operations across DLPP divisions into a single, integrated platform.
 
-Your Supabase credentials have been configured:
-- **Project URL**: https://yvnkyjnwvylrweyzvibs.supabase.co
-- **Status**: Connected and ready
+## ✨ Key Features
 
-### 2. Set Up Your Database
+- 🎯 **Executive Dashboard** - Real-time KPIs and cross-divisional analytics
+- 🏢 **8 Operational Modules** - Physical Planning, State Lands, Survey, Audit, Cases, Valuation, ILG, Customary Lands
+- 🔍 **Advanced Search & Filter** - Powerful data tables with search, filter, and sort
+- 📊 **Live Data Integration** - Real-time Supabase database connectivity
+- 🎨 **Professional UI** - Green gradient design with DLPP branding
+- 📱 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
+- 🔗 **Legacy Integration** - Iframe integration with existing Netlify applications
+- 🔐 **Role-Based Access** - Secure authentication with division-specific permissions
 
-**Option A: Use the Setup Page (Recommended)**
-1. Navigate to http://localhost:3000/setup
-2. Click "Copy SQL Schema to Clipboard"
-3. Open [Supabase SQL Editor](https://supabase.com/dashboard/project/yvnkyjnwvylrweyzvibs/sql/new)
-4. Paste and run the SQL
-5. Return to the [ILMS Dashboard](http://localhost:3000/dashboard)
+## 🚀 Quick Start
 
-**Option B: Manual Setup**
-Run the SQL from `ILMS_SETUP_GUIDE.md` in your Supabase SQL Editor.
+### Prerequisites
 
-### 3. Start Using ILMS
+- Node.js 18+ or [Bun](https://bun.sh) runtime
+- Supabase account (free tier works)
 
-The system is already running at http://localhost:3000
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/emabi2002/ilms.git
+cd ilms
+
+# Install dependencies
+bun install  # or npm install
+
+# Configure environment variables
+cp .env.example .env.local
+# Edit .env.local with your Supabase credentials
+
+# Start development server
+bun run dev  # or npm run dev
+```
+
+Visit http://localhost:3000
+
+### Database Setup
+
+1. Go to http://localhost:3000/setup
+2. Copy the SQL schema
+3. Run it in your [Supabase SQL Editor](https://supabase.com/dashboard)
+4. Return to the dashboard
+
+**For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md)**
 
 ## 📊 Features
 
@@ -57,10 +85,27 @@ The system is already running at http://localhost:3000
 - **Database**: Supabase (PostgreSQL)
 - **Package Manager**: Bun
 
+## 📸 Screenshots
+
+### Executive Dashboard
+![Executive Dashboard](https://via.placeholder.com/1200x600/10b981/ffffff?text=Executive+Dashboard+with+Real-time+KPIs)
+
+*Real-time dashboard showing KPIs across all divisions with live Supabase data*
+
+### Data Tables with Search & Filter
+![Data Table](https://via.placeholder.com/1200x600/059669/ffffff?text=Advanced+Data+Tables+with+Search+%26+Filter)
+
+*Powerful search, filter, and sort capabilities on all module data tables*
+
+### Professional Design
+![Green Gradient Header](https://via.placeholder.com/1200x200/10b981/ffffff?text=DLPP+Branded+Green+Gradient+Header)
+
+*Professional PNG government branding with DLPP logo and green gradient theme*
+
 ## 📁 Project Structure
 
 ```
-ilms-erp/
+ilms/
 ├── src/
 │   ├── app/              # Pages and routes
 │   │   ├── dashboard/    # Executive dashboard
@@ -106,3 +151,56 @@ For detailed documentation, see `ILMS_SETUP_GUIDE.md`
 
 © 2025 Department of Lands & Physical Planning, Papua New Guinea
 Internal use only. All rights reserved.
+
+## 📚 Documentation
+
+- **[Deployment Guide](DEPLOYMENT.md)** - Complete deployment instructions for all platforms
+- **[Setup Guide](ILMS_SETUP_GUIDE.md)** - Detailed system setup and configuration  
+- **[Database Schema](src/app/setup/page.tsx)** - SQL schema for database initialization
+
+## 🔧 Development Commands
+
+```bash
+bun run dev          # Start development server
+bun run build        # Build for production
+bun run start        # Start production server
+```
+
+## 🌐 Deployment
+
+Deploy to your preferred platform:
+
+- **Netlify:** Use included `netlify.toml` configuration
+- **Vercel:** Import from GitHub with one click
+- **Self-hosted:** See [DEPLOYMENT.md](DEPLOYMENT.md) for VPS setup
+
+## 🐛 Troubleshooting
+
+**Database shows 0 records:**
+- Visit `/setup` and run the SQL schema
+- Verify Supabase credentials in `.env.local`
+
+**Build errors:**
+```bash
+rm -rf .next node_modules && bun install && bun run build
+```
+
+See [DEPLOYMENT.md](DEPLOYMENT.md#troubleshooting) for more solutions.
+
+## 🎯 Roadmap
+
+- [ ] Implement Supabase Auth for user login
+- [ ] Add data entry forms for all modules  
+- [ ] Export to Excel/PDF functionality
+- [ ] Advanced analytics with charts
+- [ ] GIS/mapping integration
+- [ ] Mobile app (iOS/Android)
+
+## 👏 Acknowledgments
+
+Built with [Same](https://same.new) - AI-powered development platform
+
+---
+
+**© 2025 Department of Lands & Physical Planning, Papua New Guinea**  
+This software is proprietary and confidential. Unauthorized copying, distribution, or use is strictly prohibited.
