@@ -203,7 +203,8 @@ export async function fetchTableData(
   options?: {
     search?: string;
     searchFields?: string[];
-    filters?: Record<string, unknown>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    filters?: Record<string, any>;
     orderBy?: string;
     ascending?: boolean;
     limit?: number;
