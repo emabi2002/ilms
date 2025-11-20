@@ -55,7 +55,7 @@ export async function getDivisionSummary() {
 
     const summaryPromises = divisions.map(async (division) => {
       let tableName = '';
-      let statusField = 'status';
+      const statusField = 'status';
 
       switch (division) {
         case 'Physical Planning':
@@ -203,7 +203,7 @@ export async function fetchTableData(
   options?: {
     search?: string;
     searchFields?: string[];
-    filters?: Record<string, any>;
+    filters?: Record<string, unknown>;
     orderBy?: string;
     ascending?: boolean;
     limit?: number;

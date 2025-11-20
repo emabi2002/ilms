@@ -38,7 +38,7 @@ interface DataTableProps<T> {
   actions?: React.ReactNode;
 }
 
-export function DataTable<T extends Record<string, any>>({
+export function DataTable<T extends Record<string, unknown>>({
   data,
   columns,
   searchPlaceholder = 'Search...',
