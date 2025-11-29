@@ -283,7 +283,7 @@ CREATE POLICY "Allow all operations for authenticated users" ON users FOR ALL US
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
                   <div>
                     <p className="text-sm font-medium text-green-900">Connected to Supabase</p>
-                    <p className="text-xs text-zinc-500">https://yvnkyjnwvylrweyzvibs.supabase.co</p>
+                    <p className="text-xs text-zinc-500">https://xelptlfgpxdzrstiwcti.supabase.co</p>
                   </div>
                 </>
               ) : (
@@ -328,7 +328,7 @@ CREATE POLICY "Allow all operations for authenticated users" ON users FOR ALL US
                   <p className="text-sm text-zinc-600">
                     Go to{' '}
                     <a
-                      href="https://supabase.com/dashboard/project/yvnkyjnwvylrweyzvibs/sql/new"
+                      href="https://supabase.com/dashboard/project/xelptlfgpxdzrstiwcti/sql/new"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:underline"
